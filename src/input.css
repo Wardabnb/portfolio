@@ -1,0 +1,82 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    font-family: fontFamily;
+  }
+  form  {
+    @apply font-bold block text-lg text-center 
+  }
+
+  .input-base {
+    @apply p-1  text-lg w-96
+           ring ring-gray-400 
+           mb-2 rounded
+           placeholder:text-gray-400 placeholder:font-normal content-center
+  }
+
+  form input:not([type=submit]):not([type=checkbox]),
+  form textarea {
+    @apply input-base 
+         ring-about-text
+           focus:invalid:ring-red-400 
+           focus:bg-about-text focus:outline-none 
+  }
+
+
+}
+@layer components {
+    form button[type="submit"]:hover {
+        @apply bg-blue-700;
+    }
+}
+@layer utilities {
+    
+    .h-custom-height {
+      height: 200px; 
+     
+    }
+    .h-custom-about {
+      height: 500px; 
+     
+    }
+    .p-custom-about {
+      padding: 50px; 
+     
+    }
+
+    .h-custom-work {
+        height: 900px; 
+       
+      }
+    .btn-custom-padding {
+        padding: 10px 20px; /* Remplacez 10px et 20px par le padding souhaité */
+      }
+    .h-custom-resume {
+        height: 800px; /* Remplacez 10px et 20px par le padding souhaité */
+      }
+    .w-custom-resume {
+        width: 30em; /* Remplacez 10px et 20px par le padding souhaité */
+      }
+    .text-custom-resume {
+        font-size:19px ; /* Remplacez 10px et 20px par le padding souhaité */
+      }
+      .div-custom-padding {
+        padding-left:10% ; /* Remplacez 10px et 20px par le padding souhaité */
+      }
+      .w-custom-form {
+        max-width: 400px ; /* Remplacez 10px et 20px par le padding souhaité */
+      }
+      .sm-custom-text-about {
+        size: 4px ; /* Remplacez 10px et 20px par le padding souhaité */
+      }
+      .md-custom-img{
+       height: 400px ; /* Remplacez 10px et 20px par le padding souhaité */
+      }
+      
+      
+     
+  }
